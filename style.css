@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+ 
+/* Universal Selector */
+*{
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box;
+}
+/* Creating Global variables for colors so that they can be used any where in the project */
+:root{
+    --primary-text-color:#183b56;
+    --secondary-text-color:#577592;
+    --accent-color:#2294ed;
+    --accent-color-dark:#1d69a3;
+}
+
+body{
+    font-family: "Poppins",sans-serif;
+    /* Taking the help of variables color */
+    color: var(--primary-text-color);
+}
+/* For all paragraphs */
+p{
+    font-family: "Roboto",sans-serif;
+    color :var(--secondary-text-color);
+    line-height : 1.4rem;   
+}
+/* Removing the underlines from the anchor tags */
+a{
+    text-decoration: none;
+}
+/* Removing the bullet points from the list */
+ul{
+    list-style: none;
+}
+
+.flex{
+    display : flex;
+
+    align-items :center;
+}
+
+.container{
+    max-width: 1180px;
+    margin-inline:auto;
+    overflow: hidden;
+}
+nav{
+    background-color: #f3faff;
+    box-shadow: 0 0 4px #bbd0e2;
+    position :fixed;
+    top :0;
+    z-index: 99;
+    left : 0;
+    right :0;
+}
+
+.main-nav{
+    justify-content: space-between;
+    padding-block: 8px;
+}
+
+.company-logo img {
+    width :120px;
+}
+/* It provides the gap btw ipl finance etc., */
+.nav-links ul{
+    gap:16px;
+}
+/* It changes the cursor once when we point on hoverlinks */
+.hover-link{
+    cursor:pointer;
+}
+
+/* Defining the hover state */
+/* Color changes when we hover on the link */
+.hover-link:hover {
+    color:var(--secondary-text-color);
+
+}
+/* Color changes when we click on the link */
+.hover-link:active{
+    color:red;
+}
+
+.nav-item.active{
+    color: var(--accent-color)
+}
+
+.search-bar{
+    height: 32px;
+    gap :8px
+
+}
+
+.news-input{
+    width :200px;
+    height :100%;
+    padding-inline :12px; 
+    border-radius :4px;
+    border: 2px solid #bbd0e2;
+    font-family: "Roboto",sans-serif;
+
+}
+.search-button{
+    background-color:var(--accent-color);
+    color:white;
+    padding :8px 24px;
+    border :none;
+    border-radius: 4px;
+    cursor :pointer;
+    font-family: "Roboto",sans-serif;
+}
+.search-button:hover{
+    background-color: var(--accent-color-dark);
+
+}
+main{
+    padding-block:20px;
+    margin-top:80px;
+
+}
+
+.cards-container{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap :20px;
+    align-items:start;
+}
+.card{
+    width:360px;
+    min-height:400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius :4px;
+    cursor: pointer;
+    background-color:#fff;
+    overflow : hidden;
+    transition : all 0.3s ease;
+}
+
+.card:hover{
+    box-shadow:1px 1px 8px #d4ecff;
+    background-color: #f9fdff;
+    transform :translateY(-5px)
+}
+
+.card-header img{
+    width:100%;
+    height :180px;
+    object-fit: cover;
+}
+
+.class-content{
+    padding:12px;
+
+}
+
+.news-source{
+    margin-block : 12px;
+
+}
